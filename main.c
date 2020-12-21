@@ -237,10 +237,10 @@ int main(void)
 		while(1){
 			delay_ms(1000);
 			if(exti1 == 1){
-					float temp = SHT2x_GetTempPoll();
-					float humi = SHT2x_GetHumiPoll();
-					printf("temp:%f humi:%f",temp,humi);
-					AT_Send_message("{\"id\":1605187527200,\"params\":{\"DATA\":\"123123\"},\"version\":\"1.0\",\"method\":\"thing.event.property.post\"}");										//物模型属性上报
+					int temp = SHT2x_GetTempPoll();
+					int humi = SHT2x_GetHumiPoll();
+					printf("temp:%d humi:%d",temp,humi);
+					AT_Send_message("{\"id\":1605187527200,\"params\":{\"DATA\":\"temp,23,humi,34,light,1,sw,0\"},\"version\":\"1.0\",\"method\":\"thing.event.property.post\"}");										//物模型属性上报
 					exti1 = 0;
 				}
 		

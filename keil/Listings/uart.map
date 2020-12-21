@@ -43,7 +43,6 @@ Section Cross References
     main.o(i.main) refers to atcommand.o(i.AT_generate_MQTTPUB_command) for AT_generate_MQTTPUB_command
     main.o(i.main) refers to sht2x.o(i.SHT2x_GetTempPoll) for SHT2x_GetTempPoll
     main.o(i.main) refers to sht2x.o(i.SHT2x_GetHumiPoll) for SHT2x_GetHumiPoll
-    main.o(i.main) refers to f2d.o(.text) for __aeabi_f2d
     main.o(i.main) refers to atcommand.o(i.AT_Send_message) for AT_Send_message
     main.o(i.main) refers to exti.o(.data) for exti1
     main.o(i.main) refers to main.o(.conststring) for .conststring
@@ -1619,49 +1618,49 @@ Image Symbol Table
     internal_alloc                           0x00003759   Thumb Code    76  mallocr.o(i.internal_alloc)
     i.isEmpty                                0x000037a8   Section        0  buffer.o(i.isEmpty)
     i.main                                   0x000037bc   Section        0  main.o(i.main)
-    i.ms_ticker_init                         0x00004188   Section        0  tick.o(i.ms_ticker_init)
-    i.ms_ticker_read                         0x000041e8   Section        0  tick.o(i.ms_ticker_read)
-    i.myUartInit                             0x000041f4   Section        0  myuart.o(i.myUartInit)
-    i.parse_array                            0x00004294   Section        0  cjson.o(i.parse_array)
-    parse_array                              0x00004295   Thumb Code   248  cjson.o(i.parse_array)
-    i.parse_hex4                             0x0000438c   Section        0  cjson.o(i.parse_hex4)
-    parse_hex4                               0x0000438d   Thumb Code    90  cjson.o(i.parse_hex4)
-    i.parse_number                           0x000043e8   Section        0  cjson.o(i.parse_number)
-    parse_number                             0x000043e9   Thumb Code   316  cjson.o(i.parse_number)
-    i.parse_object                           0x0000453c   Section        0  cjson.o(i.parse_object)
-    parse_object                             0x0000453d   Thumb Code   318  cjson.o(i.parse_object)
-    i.parse_string                           0x0000467a   Section        0  cjson.o(i.parse_string)
-    parse_string                             0x0000467b   Thumb Code   396  cjson.o(i.parse_string)
-    i.parse_value                            0x00004808   Section        0  cjson.o(i.parse_value)
-    parse_value                              0x00004809   Thumb Code   290  cjson.o(i.parse_value)
-    i.realloc                                0x00004944   Section        0  mallocr.o(i.realloc)
-    i.receiveDeviceInfotFromALiIOT           0x000049b0   Section        0  atcommand.o(i.receiveDeviceInfotFromALiIOT)
-    i.recoverDeviceInfo                      0x00004b90   Section        0  atcommand.o(i.recoverDeviceInfo)
-    i.sendCommand                            0x00004bfc   Section        0  atcommand.o(i.sendCommand)
-    i.skip_utf8_bom                          0x00004c74   Section        0  cjson.o(i.skip_utf8_bom)
-    skip_utf8_bom                            0x00004c75   Thumb Code    56  cjson.o(i.skip_utf8_bom)
-    i.ssd1106_delay_ms                       0x00004cb0   Section        0  oled.o(i.ssd1106_delay_ms)
-    ssd1106_delay_ms                         0x00004cb1   Thumb Code    12  oled.o(i.ssd1106_delay_ms)
-    i.ssd1106_i2c_bus_init                   0x00004cbc   Section        0  oled.o(i.ssd1106_i2c_bus_init)
-    ssd1106_i2c_bus_init                     0x00004cbd   Thumb Code    72  oled.o(i.ssd1106_i2c_bus_init)
-    i.ssd1106_i2c_bus_write                  0x00004d08   Section        0  oled.o(i.ssd1106_i2c_bus_write)
-    ssd1106_i2c_bus_write                    0x00004d09   Thumb Code    32  oled.o(i.ssd1106_i2c_bus_write)
-    i.storeDeviceInfo                        0x00004d28   Section        0  atcommand.o(i.storeDeviceInfo)
-    i.strtod                                 0x00004dd8   Section        0  strtod.o(i.strtod)
-    i.utf16_literal_to_utf8                  0x00004e08   Section        0  cjson.o(i.utf16_literal_to_utf8)
-    utf16_literal_to_utf8                    0x00004e09   Thumb Code   300  cjson.o(i.utf16_literal_to_utf8)
-    .constdata                               0x00004f34   Section       72  myuart.o(.constdata)
-    .constdata                               0x00004f7c   Section      320  sign_sha256.o(.constdata)
-    K                                        0x00004f7c   Data         256  sign_sha256.o(.constdata)
-    sha256_padding                           0x0000507c   Data          64  sign_sha256.o(.constdata)
-    .constdata                               0x000050bc   Section       20  i2c.o(.constdata)
-    .constdata                               0x000050d0   Section     2072  oled.o(.constdata)
-    .constdata                               0x000058e8   Section       76  gpio_MSP432P4XX.o(.constdata)
-    GPIO_PORT_TO_INT                         0x000058e8   Data          28  gpio_MSP432P4XX.o(.constdata)
-    GPIO_PORT_TO_BASE                        0x00005904   Data          48  gpio_MSP432P4XX.o(.constdata)
-    .constdata                               0x00005934   Section       64  ctype_c.o(.constdata)
-    .conststring                             0x00005974   Section      169  main.o(.conststring)
-    .conststring                             0x00005a20   Section      343  sign_mqtt.o(.conststring)
+    i.ms_ticker_init                         0x00004178   Section        0  tick.o(i.ms_ticker_init)
+    i.ms_ticker_read                         0x000041d8   Section        0  tick.o(i.ms_ticker_read)
+    i.myUartInit                             0x000041e4   Section        0  myuart.o(i.myUartInit)
+    i.parse_array                            0x00004284   Section        0  cjson.o(i.parse_array)
+    parse_array                              0x00004285   Thumb Code   248  cjson.o(i.parse_array)
+    i.parse_hex4                             0x0000437c   Section        0  cjson.o(i.parse_hex4)
+    parse_hex4                               0x0000437d   Thumb Code    90  cjson.o(i.parse_hex4)
+    i.parse_number                           0x000043d8   Section        0  cjson.o(i.parse_number)
+    parse_number                             0x000043d9   Thumb Code   316  cjson.o(i.parse_number)
+    i.parse_object                           0x0000452c   Section        0  cjson.o(i.parse_object)
+    parse_object                             0x0000452d   Thumb Code   318  cjson.o(i.parse_object)
+    i.parse_string                           0x0000466a   Section        0  cjson.o(i.parse_string)
+    parse_string                             0x0000466b   Thumb Code   396  cjson.o(i.parse_string)
+    i.parse_value                            0x000047f8   Section        0  cjson.o(i.parse_value)
+    parse_value                              0x000047f9   Thumb Code   290  cjson.o(i.parse_value)
+    i.realloc                                0x00004934   Section        0  mallocr.o(i.realloc)
+    i.receiveDeviceInfotFromALiIOT           0x000049a0   Section        0  atcommand.o(i.receiveDeviceInfotFromALiIOT)
+    i.recoverDeviceInfo                      0x00004b80   Section        0  atcommand.o(i.recoverDeviceInfo)
+    i.sendCommand                            0x00004bec   Section        0  atcommand.o(i.sendCommand)
+    i.skip_utf8_bom                          0x00004c64   Section        0  cjson.o(i.skip_utf8_bom)
+    skip_utf8_bom                            0x00004c65   Thumb Code    56  cjson.o(i.skip_utf8_bom)
+    i.ssd1106_delay_ms                       0x00004ca0   Section        0  oled.o(i.ssd1106_delay_ms)
+    ssd1106_delay_ms                         0x00004ca1   Thumb Code    12  oled.o(i.ssd1106_delay_ms)
+    i.ssd1106_i2c_bus_init                   0x00004cac   Section        0  oled.o(i.ssd1106_i2c_bus_init)
+    ssd1106_i2c_bus_init                     0x00004cad   Thumb Code    72  oled.o(i.ssd1106_i2c_bus_init)
+    i.ssd1106_i2c_bus_write                  0x00004cf8   Section        0  oled.o(i.ssd1106_i2c_bus_write)
+    ssd1106_i2c_bus_write                    0x00004cf9   Thumb Code    32  oled.o(i.ssd1106_i2c_bus_write)
+    i.storeDeviceInfo                        0x00004d18   Section        0  atcommand.o(i.storeDeviceInfo)
+    i.strtod                                 0x00004dc8   Section        0  strtod.o(i.strtod)
+    i.utf16_literal_to_utf8                  0x00004df8   Section        0  cjson.o(i.utf16_literal_to_utf8)
+    utf16_literal_to_utf8                    0x00004df9   Thumb Code   300  cjson.o(i.utf16_literal_to_utf8)
+    .constdata                               0x00004f24   Section       72  myuart.o(.constdata)
+    .constdata                               0x00004f6c   Section      320  sign_sha256.o(.constdata)
+    K                                        0x00004f6c   Data         256  sign_sha256.o(.constdata)
+    sha256_padding                           0x0000506c   Data          64  sign_sha256.o(.constdata)
+    .constdata                               0x000050ac   Section       20  i2c.o(.constdata)
+    .constdata                               0x000050c0   Section     2072  oled.o(.constdata)
+    .constdata                               0x000058d8   Section       76  gpio_MSP432P4XX.o(.constdata)
+    GPIO_PORT_TO_INT                         0x000058d8   Data          28  gpio_MSP432P4XX.o(.constdata)
+    GPIO_PORT_TO_BASE                        0x000058f4   Data          48  gpio_MSP432P4XX.o(.constdata)
+    .constdata                               0x00005924   Section       64  ctype_c.o(.constdata)
+    .conststring                             0x00005964   Section      193  main.o(.conststring)
+    .conststring                             0x00005a28   Section      343  sign_mqtt.o(.conststring)
     .data                                    0x20000000   Section        4  system_msp432p401r.o(.data)
     .data                                    0x20000004   Section       24  main.o(.data)
     .data                                    0x2000001c   Section        4  tick.o(.data)
@@ -1938,22 +1937,22 @@ Image Symbol Table
     i2c_cmd_write                            0x0000367d   Thumb Code   118  i2c.o(i.i2c_cmd_write)
     i2c_init                                 0x000036fd   Thumb Code    76  i2c.o(i.i2c_init)
     isEmpty                                  0x000037a9   Thumb Code    18  buffer.o(i.isEmpty)
-    main                                     0x000037bd   Thumb Code  2270  main.o(i.main)
-    ms_ticker_init                           0x00004189   Thumb Code    82  tick.o(i.ms_ticker_init)
-    ms_ticker_read                           0x000041e9   Thumb Code     6  tick.o(i.ms_ticker_read)
-    myUartInit                               0x000041f5   Thumb Code   140  myuart.o(i.myUartInit)
-    realloc                                  0x00004945   Thumb Code   102  mallocr.o(i.realloc)
-    receiveDeviceInfotFromALiIOT             0x000049b1   Thumb Code   386  atcommand.o(i.receiveDeviceInfotFromALiIOT)
-    recoverDeviceInfo                        0x00004b91   Thumb Code   104  atcommand.o(i.recoverDeviceInfo)
-    sendCommand                              0x00004bfd   Thumb Code    62  atcommand.o(i.sendCommand)
-    storeDeviceInfo                          0x00004d29   Thumb Code   168  atcommand.o(i.storeDeviceInfo)
-    strtod                                   0x00004dd9   Thumb Code    34  strtod.o(i.strtod)
-    i2cConfig                                0x000050bc   Data          20  i2c.o(.constdata)
-    F6x8                                     0x000050d0   Data         552  oled.o(.constdata)
-    F8X16                                    0x000052f8   Data        1520  oled.o(.constdata)
-    __ctype_categories                       0x00005934   Data          64  ctype_c.o(.constdata)
-    Region$$Table$$Base                      0x00005b78   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00005b98   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x000037bd   Thumb Code  2256  main.o(i.main)
+    ms_ticker_init                           0x00004179   Thumb Code    82  tick.o(i.ms_ticker_init)
+    ms_ticker_read                           0x000041d9   Thumb Code     6  tick.o(i.ms_ticker_read)
+    myUartInit                               0x000041e5   Thumb Code   140  myuart.o(i.myUartInit)
+    realloc                                  0x00004935   Thumb Code   102  mallocr.o(i.realloc)
+    receiveDeviceInfotFromALiIOT             0x000049a1   Thumb Code   386  atcommand.o(i.receiveDeviceInfotFromALiIOT)
+    recoverDeviceInfo                        0x00004b81   Thumb Code   104  atcommand.o(i.recoverDeviceInfo)
+    sendCommand                              0x00004bed   Thumb Code    62  atcommand.o(i.sendCommand)
+    storeDeviceInfo                          0x00004d19   Thumb Code   168  atcommand.o(i.storeDeviceInfo)
+    strtod                                   0x00004dc9   Thumb Code    34  strtod.o(i.strtod)
+    i2cConfig                                0x000050ac   Data          20  i2c.o(.constdata)
+    F6x8                                     0x000050c0   Data         552  oled.o(.constdata)
+    F8X16                                    0x000052e8   Data        1520  oled.o(.constdata)
+    __ctype_categories                       0x00005924   Data          64  ctype_c.o(.constdata)
+    Region$$Table$$Base                      0x00005b80   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00005ba0   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_msp432p401r.o(.data)
     wifi_ssid                                0x20000004   Data           4  main.o(.data)
     wifi_pwd                                 0x20000008   Data           4  main.o(.data)
@@ -1982,9 +1981,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000145
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00005c24, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00005c2c, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00005b98, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00005ba0, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2137,63 +2136,63 @@ Memory Map of the image
     0x00003758   0x00003758   0x00000050   Code   RO         3195    i.internal_alloc    mc_w.l(mallocr.o)
     0x000037a8   0x000037a8   0x00000012   Code   RO          395    i.isEmpty           buffer.o
     0x000037ba   0x000037ba   0x00000002   PAD
-    0x000037bc   0x000037bc   0x000009cc   Code   RO           76    i.main              main.o
-    0x00004188   0x00004188   0x00000060   Code   RO          341    i.ms_ticker_init    tick.o
-    0x000041e8   0x000041e8   0x0000000c   Code   RO          342    i.ms_ticker_read    tick.o
-    0x000041f4   0x000041f4   0x000000a0   Code   RO          266    i.myUartInit        myuart.o
-    0x00004294   0x00004294   0x000000f8   Code   RO          671    i.parse_array       cjson.o
-    0x0000438c   0x0000438c   0x0000005a   Code   RO          672    i.parse_hex4        cjson.o
-    0x000043e6   0x000043e6   0x00000002   PAD
-    0x000043e8   0x000043e8   0x00000154   Code   RO          673    i.parse_number      cjson.o
-    0x0000453c   0x0000453c   0x0000013e   Code   RO          674    i.parse_object      cjson.o
-    0x0000467a   0x0000467a   0x0000018c   Code   RO          675    i.parse_string      cjson.o
-    0x00004806   0x00004806   0x00000002   PAD
-    0x00004808   0x00004808   0x0000013c   Code   RO          676    i.parse_value       cjson.o
-    0x00004944   0x00004944   0x0000006c   Code   RO         3196    i.realloc           mc_w.l(mallocr.o)
-    0x000049b0   0x000049b0   0x000001e0   Code   RO          467    i.receiveDeviceInfotFromALiIOT  atcommand.o
-    0x00004b90   0x00004b90   0x0000006c   Code   RO          468    i.recoverDeviceInfo  atcommand.o
-    0x00004bfc   0x00004bfc   0x00000078   Code   RO          469    i.sendCommand       atcommand.o
-    0x00004c74   0x00004c74   0x0000003c   Code   RO          687    i.skip_utf8_bom     cjson.o
-    0x00004cb0   0x00004cb0   0x0000000c   Code   RO         1595    i.ssd1106_delay_ms  oled.o
-    0x00004cbc   0x00004cbc   0x0000004c   Code   RO         1596    i.ssd1106_i2c_bus_init  oled.o
-    0x00004d08   0x00004d08   0x00000020   Code   RO         1597    i.ssd1106_i2c_bus_write  oled.o
-    0x00004d28   0x00004d28   0x000000b0   Code   RO          470    i.storeDeviceInfo   atcommand.o
-    0x00004dd8   0x00004dd8   0x00000030   Code   RO         2899    i.strtod            m_wm.l(strtod.o)
-    0x00004e08   0x00004e08   0x0000012c   Code   RO          690    i.utf16_literal_to_utf8  cjson.o
-    0x00004f34   0x00004f34   0x00000048   Data   RO          267    .constdata          myuart.o
-    0x00004f7c   0x00004f7c   0x00000140   Data   RO         1324    .constdata          sign_sha256.o
-    0x000050bc   0x000050bc   0x00000014   Data   RO         1540    .constdata          i2c.o
-    0x000050d0   0x000050d0   0x00000818   Data   RO         1598    .constdata          oled.o
-    0x000058e8   0x000058e8   0x0000004c   Data   RO         2060    .constdata          msp432p4xx_driverlib.lib(gpio_MSP432P4XX.o)
-    0x00005934   0x00005934   0x00000040   Data   RO         3298    .constdata          mc_w.l(ctype_c.o)
-    0x00005974   0x00005974   0x000000a9   Data   RO           78    .conststring        main.o
-    0x00005a1d   0x00005a1d   0x00000003   PAD
-    0x00005a20   0x00005a20   0x00000157   Data   RO         1263    .conststring        sign_mqtt.o
-    0x00005b77   0x00005b77   0x00000001   PAD
-    0x00005b78   0x00005b78   0x00000020   Data   RO         3300    Region$$Table       anon$$obj.o
+    0x000037bc   0x000037bc   0x000009bc   Code   RO           76    i.main              main.o
+    0x00004178   0x00004178   0x00000060   Code   RO          341    i.ms_ticker_init    tick.o
+    0x000041d8   0x000041d8   0x0000000c   Code   RO          342    i.ms_ticker_read    tick.o
+    0x000041e4   0x000041e4   0x000000a0   Code   RO          266    i.myUartInit        myuart.o
+    0x00004284   0x00004284   0x000000f8   Code   RO          671    i.parse_array       cjson.o
+    0x0000437c   0x0000437c   0x0000005a   Code   RO          672    i.parse_hex4        cjson.o
+    0x000043d6   0x000043d6   0x00000002   PAD
+    0x000043d8   0x000043d8   0x00000154   Code   RO          673    i.parse_number      cjson.o
+    0x0000452c   0x0000452c   0x0000013e   Code   RO          674    i.parse_object      cjson.o
+    0x0000466a   0x0000466a   0x0000018c   Code   RO          675    i.parse_string      cjson.o
+    0x000047f6   0x000047f6   0x00000002   PAD
+    0x000047f8   0x000047f8   0x0000013c   Code   RO          676    i.parse_value       cjson.o
+    0x00004934   0x00004934   0x0000006c   Code   RO         3196    i.realloc           mc_w.l(mallocr.o)
+    0x000049a0   0x000049a0   0x000001e0   Code   RO          467    i.receiveDeviceInfotFromALiIOT  atcommand.o
+    0x00004b80   0x00004b80   0x0000006c   Code   RO          468    i.recoverDeviceInfo  atcommand.o
+    0x00004bec   0x00004bec   0x00000078   Code   RO          469    i.sendCommand       atcommand.o
+    0x00004c64   0x00004c64   0x0000003c   Code   RO          687    i.skip_utf8_bom     cjson.o
+    0x00004ca0   0x00004ca0   0x0000000c   Code   RO         1595    i.ssd1106_delay_ms  oled.o
+    0x00004cac   0x00004cac   0x0000004c   Code   RO         1596    i.ssd1106_i2c_bus_init  oled.o
+    0x00004cf8   0x00004cf8   0x00000020   Code   RO         1597    i.ssd1106_i2c_bus_write  oled.o
+    0x00004d18   0x00004d18   0x000000b0   Code   RO          470    i.storeDeviceInfo   atcommand.o
+    0x00004dc8   0x00004dc8   0x00000030   Code   RO         2899    i.strtod            m_wm.l(strtod.o)
+    0x00004df8   0x00004df8   0x0000012c   Code   RO          690    i.utf16_literal_to_utf8  cjson.o
+    0x00004f24   0x00004f24   0x00000048   Data   RO          267    .constdata          myuart.o
+    0x00004f6c   0x00004f6c   0x00000140   Data   RO         1324    .constdata          sign_sha256.o
+    0x000050ac   0x000050ac   0x00000014   Data   RO         1540    .constdata          i2c.o
+    0x000050c0   0x000050c0   0x00000818   Data   RO         1598    .constdata          oled.o
+    0x000058d8   0x000058d8   0x0000004c   Data   RO         2060    .constdata          msp432p4xx_driverlib.lib(gpio_MSP432P4XX.o)
+    0x00005924   0x00005924   0x00000040   Data   RO         3298    .constdata          mc_w.l(ctype_c.o)
+    0x00005964   0x00005964   0x000000c1   Data   RO           78    .conststring        main.o
+    0x00005a25   0x00005a25   0x00000003   PAD
+    0x00005a28   0x00005a28   0x00000157   Data   RO         1263    .conststring        sign_mqtt.o
+    0x00005b7f   0x00005b7f   0x00000001   PAD
+    0x00005b80   0x00005b80   0x00000020   Data   RO         3300    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00005b98, Size: 0x000022c0, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00005ba0, Size: 0x000022c0, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00005b98   0x00000004   Data   RW            6    .data               system_msp432p401r.o
-    0x20000004   0x00005b9c   0x00000018   Data   RW           79    .data               main.o
-    0x2000001c   0x00005bb4   0x00000004   Data   RW          343    .data               tick.o
-    0x20000020   0x00005bb8   0x00000014   Data   RW          692    .data               cjson.o
-    0x20000034   0x00005bcc   0x00000040   Data   RW         1264    .data               sign_mqtt.o
-    0x20000074   0x00005c0c   0x00000001   Data   RW         1391    .data               exti.o
-    0x20000075   0x00005c0d   0x00000003   PAD
-    0x20000078   0x00005c10   0x00000004   Data   RW         1541    .data               i2c.o
-    0x2000007c   0x00005c14   0x00000004   Data   RW         1718    .data               sht2x.o
-    0x20000080   0x00005c18   0x00000004   Data   RW         3249    .data               mc_w.l(stdout.o)
-    0x20000084   0x00005c1c   0x00000004   Data   RW         3260    .data               mc_w.l(mvars.o)
-    0x20000088   0x00005c20   0x00000004   Data   RW         3261    .data               mc_w.l(mvars.o)
+    0x20000000   0x00005ba0   0x00000004   Data   RW            6    .data               system_msp432p401r.o
+    0x20000004   0x00005ba4   0x00000018   Data   RW           79    .data               main.o
+    0x2000001c   0x00005bbc   0x00000004   Data   RW          343    .data               tick.o
+    0x20000020   0x00005bc0   0x00000014   Data   RW          692    .data               cjson.o
+    0x20000034   0x00005bd4   0x00000040   Data   RW         1264    .data               sign_mqtt.o
+    0x20000074   0x00005c14   0x00000001   Data   RW         1391    .data               exti.o
+    0x20000075   0x00005c15   0x00000003   PAD
+    0x20000078   0x00005c18   0x00000004   Data   RW         1541    .data               i2c.o
+    0x2000007c   0x00005c1c   0x00000004   Data   RW         1718    .data               sht2x.o
+    0x20000080   0x00005c20   0x00000004   Data   RW         3249    .data               mc_w.l(stdout.o)
+    0x20000084   0x00005c24   0x00000004   Data   RW         3260    .data               mc_w.l(mvars.o)
+    0x20000088   0x00005c28   0x00000004   Data   RW         3261    .data               mc_w.l(mvars.o)
     0x2000008c        -       0x00000096   Zero   RW           77    .bss                main.o
-    0x20000122   0x00005c24   0x00000002   PAD
+    0x20000122   0x00005c2c   0x00000002   PAD
     0x20000124        -       0x000000d0   Zero   RW          397    .bss                buffer.o
     0x200001f4        -       0x000000c8   Zero   RW          471    .bss                atcommand.o
-    0x200002bc   0x00005c24   0x00000004   PAD
+    0x200002bc   0x00005c2c   0x00000004   PAD
     0x200002c0        -       0x00001000   Zero   RW           66    HEAP                startup_msp432p401r_uvision.o
     0x200012c0        -       0x00001000   Zero   RW           65    STACK               startup_msp432p401r_uvision.o
 
@@ -2213,24 +2212,24 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      3252        738          0          0        200      15589   atcommand.o
-       258          0          0          0        208       3899   buffer.o
-      2722         76          0         20          0      18275   cjson.o
-       136         12          0          1          0       1196   exti.o
-       448         34         20          4          0       2982   i2c.o
-        80          4          0          0          0        475   led.o
-      2540       1186        169         24        150     202520   main.o
-       268         34         72          0          0       5846   myuart.o
-       808         46       2072          0          0       7254   oled.o
-       360         42          0          4          0       4780   sht2x.o
-      1316        132        343         64          0      10008   sign_mqtt.o
-      1216         44        320          0          0       9966   sign_sha256.o
+      3252        738          0          0        200      15517   atcommand.o
+       258          0          0          0        208       3867   buffer.o
+      2722         76          0         20          0      18187   cjson.o
+       136         12          0          1          0       1184   exti.o
+       448         34         20          4          0       2962   i2c.o
+        80          4          0          0          0        471   led.o
+      2524       1184        193         24        150     202444   main.o
+       268         34         72          0          0       5826   myuart.o
+       808         46       2072          0          0       7202   oled.o
+       360         42          0          4          0       4748   sht2x.o
+      1316        132        343         64          0       9980   sign_mqtt.o
+      1216         44        320          0          0       9934   sign_sha256.o
         36          8        324          0       8192        936   startup_msp432p401r_uvision.o
-       108         22          0          4          0       5415   system_msp432p401r.o
-       150         24          0          4          0      32558   tick.o
+       108         22          0          4          0       5407   system_msp432p401r.o
+       150         24          0          4          0      32530   tick.o
 
     ----------------------------------------------------------------------
-     13718       2402       3356        128       8756     321699   Object Totals
+     13702       2400       3380        128       8756     321195   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         20          0          4          3          6          0   (incl. Padding)
 
@@ -2311,15 +2310,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     19952       2610       3496        140       8756     340029   Grand Totals
-     19952       2610       3496        140       8756     340029   ELF Image Totals
-     19952       2610       3496        140          0          0   ROM Totals
+     19936       2608       3520        140       8756     339525   Grand Totals
+     19936       2608       3520        140       8756     339525   ELF Image Totals
+     19936       2608       3520        140          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                23448 (  22.90kB)
+    Total RO  Size (Code + RO Data)                23456 (  22.91kB)
     Total RW  Size (RW Data + ZI Data)              8896 (   8.69kB)
-    Total ROM Size (Code + RO Data + RW Data)      23588 (  23.04kB)
+    Total ROM Size (Code + RO Data + RW Data)      23596 (  23.04kB)
 
 ==============================================================================
 
