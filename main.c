@@ -18,6 +18,7 @@
 #include "oled.h"
 #include "sht2x.h"
 #include "sw.h"
+#include "myTimer.h"
 
 #define _debug_									//需要获取at指令执行详细信息时打开，注意供电不足时打开可能会导致串口频繁崩溃
 
@@ -225,6 +226,7 @@ int main(void)
 		
 		AT_generate_MQTTPUB_command(ATCommandBuffer,MaxCommandLength,ProductKey,DeviceName);
 		while(!execAT(ATCommandBuffer));
+		timer0Init(30 * 4000000);
 		while(1){
 			delay_ms(1000);
 			if(exti1 == 1){

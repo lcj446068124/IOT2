@@ -54,3 +54,4 @@
 .\objects\main.o: ..\oled.h
 .\objects\main.o: ..\sht2x.h
 .\objects\main.o: ..\sw.h
+.\objects\main.o: ..\myTimer.h

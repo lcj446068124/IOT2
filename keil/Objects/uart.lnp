@@ -16,6 +16,7 @@
 ".\objects\oled.o"
 ".\objects\sht2x.o"
 ".\objects\sw.o"
+".\objects\mytimer.o"
 --library_type=microlib --strict --scatter ".\Objects\uart.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

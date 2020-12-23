@@ -477,6 +477,11 @@
               <FileType>1</FileType>
               <FilePath>..\sw.c</FilePath>
             </File>
+            <File>
+              <FileName>myTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\myTimer.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
