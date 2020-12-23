@@ -472,6 +472,11 @@
               <FileType>1</FileType>
               <FilePath>..\sht2x.c</FilePath>
             </File>
+            <File>
+              <FileName>sw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\sw.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

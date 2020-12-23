@@ -1,17 +1,3 @@
-///******************************************************************************
-// *
-// *               MSP432P401
-// *             -----------------
-// *            |                 |
-// *            |                 |
-// *            |                 |
-// *       RST -|     P1.3/UCA0TXD|----> PC 
-// *            |                 |
-// *            |                 |
-// *            |     P1.2/UCA0RXD|<---- PC
-// *            |                 |
-// *
-// *******************************************************************************/
 /* DriverLib Includes */
 #include <ti/devices/msp432p4xx/driverlib/driverlib.h>
 
@@ -31,6 +17,7 @@
 #include "led.h"
 #include "oled.h"
 #include "sht2x.h"
+#include "sw.h"
 
 #define _debug_									//需要获取at指令执行详细信息时打开，注意供电不足时打开可能会导致串口频繁崩溃
 
@@ -46,6 +33,10 @@ const char* ProductSecret = "viVkzVkFDYwjDzWY";
 const char* DeviceName 		= "51205901108";															//学号
 const char* DeviceSecret 	= "";
 char ATCommandBuffer[MaxCommandLength];
+char UserCommandBuffer[MaxCommandLength];
+char SendMsgBuffer[500];
+
+bool praseUserCommand(char *cmd);									//
 
 //打开微库 Options->Target->Code Generation->Use MicroLIB
 int fputc(int ch, FILE *f)
@@ -73,7 +64,7 @@ int main(void)
     MAP_SysTick_enableInterrupt();//systick config
 		//LED Config
 		LED_Init();
-	
+		switchInit();
 		myUartInit();
 		EXTIX_Init();
 		SHT2x_Init(); 
@@ -239,11 +230,31 @@ int main(void)
 			if(exti1 == 1){
 					int temp = SHT2x_GetTempPoll();
 					int humi = SHT2x_GetHumiPoll();
-					printf("temp:%d humi:%d",temp,humi);
-					AT_Send_message("{\"id\":1605187527200,\"params\":{\"DATA\":\"temp,23,humi,34,light,1,sw,0\"},\"version\":\"1.0\",\"method\":\"thing.event.property.post\"}");										//物模型属性上报
+					int ledstatu = getLed1Statu();
+					int sw1statu = getS1Statu();	
+					printf("Temp:%d humi:%d ledstatu:%d sw1statu:%d\r\n",temp,humi,ledstatu,sw1statu);
+					memset(SendMsgBuffer,0,sizeof(SendMsgBuffer));
+					sprintf(SendMsgBuffer,"{\"id\":1605187527200,\"params\":{\"DATA\":\"Temp,%d,Humi,%d,Light,%d,Switch,%d\"},\"version\":\"1.0\",\"method\":\"thing.event.property.post\"}",temp,humi,ledstatu,sw1statu);
+					//AT_Send_message("{\"id\":1605187527200,\"params\":{\"DATA\":\"temp,23,humi,34,light,1,sw,0\"},\"version\":\"1.0\",\"method\":\"thing.event.property.post\"}");										//物模型属性上报
+					AT_Send_message(SendMsgBuffer);										//物模型属性上报
 					exti1 = 0;
 				}
-		
+			char* Sub_Json_ptr = AT_Get_SUB_In_Json(&myBuffer);
+			if(Sub_Json_ptr != NULL){
+				GPIO_setOutputHighOnPin(GPIO_PORT_P2,GPIO_PIN1);   //P2.1输出高电平，LED2中绿灯亮
+				printf("receive:%s\r\n",Sub_Json_ptr);
+				cJSON* praseDataPtr = cJSON_Parse(Sub_Json_ptr);
+				cJSON* params = cJSON_GetObjectItemCaseSensitive(praseDataPtr, "params");
+				if (cJSON_IsObject(params)){
+					cJSON *DATA = cJSON_GetObjectItemCaseSensitive(params, "DATA");
+					if(cJSON_IsString(DATA)){
+						memset(UserCommandBuffer,0,sizeof(UserCommandBuffer));
+						memcpy(UserCommandBuffer,DATA->valuestring,strlen(DATA->valuestring));
+						praseUserCommand(UserCommandBuffer);
+					}
+				}
+				cJSON_Delete(praseDataPtr);
+			}
 		}
 		
 		
@@ -299,5 +310,21 @@ int main(void)
 		while(1);
 }
 
-
+bool praseUserCommand(char *cmd){
+		char* ptr = NULL;
+    ptr=strtok(cmd,",");
+		while(ptr){
+			if(!strcmp(ptr,"Light")){
+				ptr=strtok(NULL,",");
+				if(!strcmp(ptr,"1")){
+					tunnOnLed1();
+				}else if(!strcmp(ptr,"0")){
+					turnOffLed1();
+				}
+			}
+			ptr=strtok(NULL,",");
+		}
+		exti1 = 1;//下次在主循环上报更新状态
+		return true;
+}
 

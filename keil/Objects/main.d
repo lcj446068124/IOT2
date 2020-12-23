@@ -53,3 +53,4 @@
 .\objects\main.o: ..\led.h
 .\objects\main.o: ..\oled.h
 .\objects\main.o: ..\sht2x.h
+.\objects\main.o: ..\sw.h

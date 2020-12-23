@@ -57,7 +57,9 @@ void tunnOnLed1(){
 	MAP_GPIO_setOutputHighOnPin(GPIO_PORT_P1, GPIO_PIN0);	
 }
 
-
+int getLed1Statu(){
+		return MAP_GPIO_getInputPinValue(GPIO_PORT_P1,GPIO_PIN0);
+}
 
 void led2ShowRed(){
 	turnOffLed2();

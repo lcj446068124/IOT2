@@ -10,6 +10,7 @@
 void LED_Init(void);//≥ı ºªØ
 void turnOffLed2(void);
 void turnOffLed1(void);
+void tunnOnLed1(void);
 void turnOnLed2Red(void);
 void turnOnLed2Green(void);
 void turnOnLed2Blue(void);
@@ -18,5 +19,6 @@ void led2ShowRed(void);
 void led2ShowGreen(void);	
 void led2ShowBlue(void);
 void led2blink(char color,int n,int gab_ms);
+int getLed1Statu(void);
 		 				    
 #endif

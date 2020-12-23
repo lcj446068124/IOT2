@@ -20,7 +20,7 @@ void PORT1_IRQHandler(void)
     uint32_t status;
     status = MAP_GPIO_getEnabledInterruptStatus(GPIO_PORT_P1);
     MAP_GPIO_clearInterruptFlag(GPIO_PORT_P1, status);
-    GPIO_setOutputHighOnPin(GPIO_PORT_P2,GPIO_PIN0); //P2.0输出高电平，LED2中红灯亮
+    //GPIO_setOutputHighOnPin(GPIO_PORT_P2,GPIO_PIN0); //P2.0输出高电平，LED2中红灯亮
     if(status & GPIO_PIN1) //判断P1.1按键（S1键）是否按压下
     {      
 			exti1 = 1;
