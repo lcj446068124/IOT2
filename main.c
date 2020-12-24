@@ -231,7 +231,7 @@ int main(void)
 		timer0Init(30 * 4000000);							//不要大于1000秒
 		sw1statu = getS1Statu();
 		while(1){
-			delay_ms(10);
+			delay_ms(100);
 			if(sw1statu != getS1Statu()){
 				sw1statu = getS1Statu();
 				exti1 = 1;
