@@ -26,6 +26,8 @@
 
 extern char exti1;
 
+int sw1statu = 0;
+
 //const char* wifi_ssid 		=	"One";
 const char* wifi_ssid 		=	"wangjiacai";
 const char* wifi_pwd 			= "www.202058";
@@ -226,9 +228,14 @@ int main(void)
 		
 		AT_generate_MQTTPUB_command(ATCommandBuffer,MaxCommandLength,ProductKey,DeviceName);
 		while(!execAT(ATCommandBuffer));
-		timer0Init(30 * 4000000);
+		timer0Init(30 * 4000000);							//不要大于1000秒
+		sw1statu = getS1Statu();
 		while(1){
-			delay_ms(1000);
+			delay_ms(10);
+			if(sw1statu != getS1Statu()){
+				sw1statu = getS1Statu();
+				exti1 = 1;
+			}
 			if(exti1 == 1){
 					int temp = SHT2x_GetTempPoll();
 					int humi = SHT2x_GetHumiPoll();
@@ -271,6 +278,7 @@ int main(void)
 		printf("------connection established------\r\n");
 		OLED_ShowString(OLED_DISPLAY_COLUMN_START, OLED_DISPLAY_ROW_2, "LED1 statu:   ON");
     while(1){
+			
 			MAP_GPIO_toggleOutputOnPin(GPIO_PORT_P2,GPIO_PIN1);
 			if(exti1 == 1){
 				GPIO_setOutputHighOnPin(GPIO_PORT_P2,GPIO_PIN1);   //P2.1输出高电平，LED2中绿灯亮
@@ -280,7 +288,7 @@ int main(void)
 				GPIO_setOutputLowOnPin(GPIO_PORT_P2,GPIO_PIN1);
 				break;
 			}
-			delay_ms(1000);
+			delay_ms(10);
 			//traverseBuffer(&myBuffer);
 			char* Sub_Json_ptr = AT_Get_SUB_In_Json(&myBuffer);
 			if(Sub_Json_ptr != NULL){
